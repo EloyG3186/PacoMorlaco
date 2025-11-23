@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionar Inventario - Paco el Morlaco</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300;1,400;1,500;1,700;1,800&family=Montserrat+Alternates:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+    <div class="gradient-background">
+        <div class="gradient-background__layer gradient-background__layer--1"></div>
+        <div class="gradient-background__layer gradient-background__layer--2"></div>
+        <div class="gradient-background__layer gradient-background__layer--3"></div>
+        <div class="gradient-background__layer gradient-background__layer--4"></div>
+        <div class="gradient-background__layer gradient-background__layer--5"></div>
+        <div class="gradient-background__overlay"></div>
+    </div>
+
+    <header class="header">
+        <div class="header__container">
+            <div class="logo">
+                <a href="index.html" class="logo__link">
+                    <div class="logo__content">
+                        <img src="assets/images/logo.png" alt="Logo Paco el Morlaco" class="logo__image">
+                        <div class="logo__text">Toma mi mano</div>
+                    </div>
+                </a>
+                <div class="logo__border"></div>
+            </div>
+            <nav class="nav nav--admin">
+                <div class="nav__backdrop"></div>
+                <div class="nav__item"><a href="admin-dashboard.html" class="nav__link">Dashboard</a></div>
+                <div class="nav__item"><a href="admin-solicitudes.html" class="nav__link">Solicitudes</a></div>
+                <div class="nav__item nav__item--active"><a href="admin-inventario.html" class="nav__link">Inventario</a></div>
+                <div class="nav__item"><a href="admin-reportes.html" class="nav__link">Reportes</a></div>
+                <div class="nav__item"><a href="admin-moderacion.html" class="nav__link">Moderación</a></div>
+            </nav>
+            <div class="user-menu">
+                <button class="user-menu__button">
+                    <div class="user-menu__avatar"><img src="https://via.placeholder.com/45" alt="Avatar Admin"></div>
+                    <div class="user-menu__dropdown-icon"></div>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <section class="dashboard">
+                <div class="dashboard-header">
+                    <div>
+                        <h1 class="dashboard__title">Gestionar Inventario</h1>
+                        <p class="dashboard__subtitle">Administra el stock de prótesis disponibles</p>
+                    </div>
+                    <button class="btn-primary-text">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M5 12H19" stroke="#8AA0EA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        Agregar Prótesis
+                    </button>
+                </div>
+
+                <div class="inventory-stats">
+                    <div class="stat-card">
+                        <div class="stat-card__icon stat-card__icon--blue">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M20 7H4C2.89543 7 2 7.89543 2 9V19C2 20.1046 2.89543 21 4 21H20C21.1046 21 22 20.1046 22 19V9C22 7.89543 21.1046 7 20 7Z" stroke="white" stroke-width="1.5"/><path d="M16 21V5C16 4.46957 15.7893 3.96086 15.4142 3.58579C15.0391 3.21071 14.5304 3 14 3H10C9.46957 3 8.96086 3.21071 8.58579 3.58579C8.21071 3.96086 8 4.46957 8 5V21" stroke="white" stroke-width="1.5"/></svg>
+                        </div>
+                        <div class="stat-card__content">
+                            <div class="stat-card__value">48</div>
+                            <div class="stat-card__label">Total Prótesis</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card__icon stat-card__icon--green">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18455 2.99721 7.13631 4.39828 5.49706C5.79935 3.85781 7.69279 2.71537 9.79619 2.24013C11.8996 1.7649 14.1003 1.98232 16.07 2.85999" stroke="white" stroke-width="1.5"/><path d="M22 4L12 14.01L9 11.01" stroke="white" stroke-width="1.5"/></svg>
+                        </div>
+                        <div class="stat-card__content">
+                            <div class="stat-card__value">32</div>
+                            <div class="stat-card__label">Disponibles</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card__icon stat-card__icon--orange">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="white" stroke-width="1.5"/><path d="M12 8V12L15 15" stroke="white" stroke-width="1.5"/></svg>
+                        </div>
+                        <div class="stat-card__content">
+                            <div class="stat-card__value">12</div>
+                            <div class="stat-card__label">En Proceso</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card__icon stat-card__icon--red">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M10.29 3.86L1.82 18C1.64537 18.3024 1.55296 18.6453 1.55199 18.9945C1.55101 19.3437 1.64151 19.6871 1.81445 19.9905C1.98738 20.2939 2.23675 20.5467 2.53773 20.7239C2.83871 20.901 3.18082 20.9962 3.53 21H20.47C20.8192 20.9962 21.1613 20.901 21.4623 20.7239C21.7632 20.5467 22.0126 20.2939 22.1856 19.9905C22.3585 19.6871 22.449 19.3437 22.448 18.9945C22.447 18.6453 22.3546 18.3024 22.18 18L13.71 3.86C13.5317 3.56611 13.2807 3.32312 12.9812 3.15448C12.6817 2.98585 12.3437 2.89725 12 2.89725C11.6563 2.89725 11.3183 2.98585 11.0188 3.15448C10.7193 3.32312 10.4683 3.56611 10.29 3.86Z" stroke="white" stroke-width="1.5"/><path d="M12 9V13M12 17H12.01" stroke="white" stroke-width="1.5"/></svg>
+                        </div>
+                        <div class="stat-card__content">
+                            <div class="stat-card__value">4</div>
+                            <div class="stat-card__label">Stock Bajo</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="request-filters">
+                    <div class="form-group" style="flex: 1;">
+                        <label class="form-label">Tipo de prótesis</label>
+                        <select class="select">
+                            <option>Todas</option>
+                            <option>Pierna</option>
+                            <option>Brazo</option>
+                            <option>Mano</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="flex: 1;">
+                        <label class="form-label">Estado</label>
+                        <select class="select">
+                            <option>Todos</option>
+                            <option>Disponible</option>
+                            <option>En Proceso</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="flex: 1;">
+                        <label class="form-label">Proveedor</label>
+                        <select class="select">
+                            <option>Todos</option>
+                            <option>Proveedor A</option>
+                            <option>Proveedor B</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="dashboard__section">
+                    <div class="table-container">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Tipo</th>
+                                    <th>Modelo</th>
+                                    <th>Proveedor</th>
+                                    <th>Stock</th>
+                                    <th>Estado</th>
+                                    <th>Precio</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#P001</td>
+                                    <td>Prótesis de Pierna</td>
+                                    <td>ProLeg 3000</td>
+                                    <td>Proveedor A</td>
+                                    <td><span class="stock-badge stock-badge--high">12</span></td>
+                                    <td><span class="badge badge--activa">Disponible</span></td>
+                                    <td>€3,500</td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <button class="btn-icon" title="Ver"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12C23 12 19 20 12 20C5 20 1 12 1 12Z" stroke="#8AA0EA" stroke-width="1.5"/><circle cx="12" cy="12" r="3" stroke="#8AA0EA" stroke-width="1.5"/></svg></button>
+                                            <button class="btn-icon" title="Editar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M11 4H4C3.46957 4 2.96086 4.21071 2.58579 4.58579C2.21071 4.96086 2 5.46957 2 6V20C2 20.5304 2.21071 21.0391 2.58579 21.4142C2.96086 21.7893 3.46957 22 4 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V13" stroke="#8AA0EA" stroke-width="1.5"/><path d="M18.5 2.5C18.8978 2.10218 19.4374 1.87868 20 1.87868C20.5626 1.87868 21.1022 2.10218 21.5 2.5C21.8978 2.89782 22.1213 3.43739 22.1213 4C22.1213 4.56261 21.8978 5.10218 21.5 5.5L12 15L8 16L9 12L18.5 2.5Z" stroke="#8AA0EA" stroke-width="1.5"/></svg></button>
+                                            <button class="btn-icon btn-icon--danger" title="Eliminar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 6H5H21M8 6V4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2H14C14.5304 2 15.0391 2.21071 15.4142 2.58579C15.7893 2.96086 16 3.46957 16 4V6M19 6V20C19 20.5304 18.7893 21.0391 18.4142 21.4142C18.0391 21.7893 17.5304 22 17 22H7C6.46957 22 5.96086 21.7893 5.58579 21.4142C5.21071 21.0391 5 20.5304 5 20V6H19Z" stroke="#F44336" stroke-width="1.5"/></svg></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#P002</td>
+                                    <td>Prótesis de Brazo</td>
+                                    <td>ArmTech Pro</td>
+                                    <td>Proveedor B</td>
+                                    <td><span class="stock-badge stock-badge--medium">8</span></td>
+                                    <td><span class="badge badge--activa">Disponible</span></td>
+                                    <td>€4,200</td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <button class="btn-icon" title="Ver"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12C23 12 19 20 12 20C5 20 1 12 1 12Z" stroke="#8AA0EA" stroke-width="1.5"/><circle cx="12" cy="12" r="3" stroke="#8AA0EA" stroke-width="1.5"/></svg></button>
+                                            <button class="btn-icon" title="Editar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M11 4H4C3.46957 4 2.96086 4.21071 2.58579 4.58579C2.21071 4.96086 2 5.46957 2 6V20C2 20.5304 2.21071 21.0391 2.58579 21.4142C2.96086 21.7893 3.46957 22 4 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V13" stroke="#8AA0EA" stroke-width="1.5"/><path d="M18.5 2.5C18.8978 2.10218 19.4374 1.87868 20 1.87868C20.5626 1.87868 21.1022 2.10218 21.5 2.5C21.8978 2.89782 22.1213 3.43739 22.1213 4C22.1213 4.56261 21.8978 5.10218 21.5 5.5L12 15L8 16L9 12L18.5 2.5Z" stroke="#8AA0EA" stroke-width="1.5"/></svg></button>
+                                            <button class="btn-icon btn-icon--danger" title="Eliminar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 6H5H21M8 6V4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2H14C14.5304 2 15.0391 2.21071 15.4142 2.58579C15.7893 2.96086 16 3.46957 16 4V6M19 6V20C19 20.5304 18.7893 21.0391 18.4142 21.4142C18.0391 21.7893 17.5304 22 17 22H7C6.46957 22 5.96086 21.7893 5.58579 21.4142C5.21071 21.0391 5 20.5304 5 20V6H19Z" stroke="#F44336" stroke-width="1.5"/></svg></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#P003</td>
+                                    <td>Prótesis de Mano</td>
+                                    <td>HandFlex 200</td>
+                                    <td>Proveedor A</td>
+                                    <td><span class="stock-badge stock-badge--low">3</span></td>
+                                    <td><span class="badge badge--activa">Disponible</span></td>
+                                    <td>€2,800</td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <button class="btn-icon" title="Ver"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12C23 12 19 20 12 20C5 20 1 12 1 12Z" stroke="#8AA0EA" stroke-width="1.5"/><circle cx="12" cy="12" r="3" stroke="#8AA0EA" stroke-width="1.5"/></svg></button>
+                                            <button class="btn-icon" title="Editar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M11 4H4C3.46957 4 2.96086 4.21071 2.58579 4.58579C2.21071 4.96086 2 5.46957 2 6V20C2 20.5304 2.21071 21.0391 2.58579 21.4142C2.96086 21.7893 3.46957 22 4 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V13" stroke="#8AA0EA" stroke-width="1.5"/><path d="M18.5 2.5C18.8978 2.10218 19.4374 1.87868 20 1.87868C20.5626 1.87868 21.1022 2.10218 21.5 2.5C21.8978 2.89782 22.1213 3.43739 22.1213 4C22.1213 4.56261 21.8978 5.10218 21.5 5.5L12 15L8 16L9 12L18.5 2.5Z" stroke="#8AA0EA" stroke-width="1.5"/></svg></button>
+                                            <button class="btn-icon btn-icon--danger" title="Eliminar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 6H5H21M8 6V4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2H14C14.5304 2 15.0391 2.21071 15.4142 2.58579C15.7893 2.96086 16 3.46957 16 4V6M19 6V20C19 20.5304 18.7893 21.0391 18.4142 21.4142C18.0391 21.7893 17.5304 22 17 22H7C6.46957 22 5.96086 21.7893 5.58579 21.4142C5.21071 21.0391 5 20.5304 5 20V6H19Z" stroke="#F44336" stroke-width="1.5"/></svg></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

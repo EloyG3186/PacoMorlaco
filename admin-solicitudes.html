@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionar Solicitudes - Paco el Morlaco</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300;1,400;1,500;1,700;1,800&family=Montserrat+Alternates:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+    <!-- Background Gradients -->
+    <div class="gradient-background">
+        <div class="gradient-background__layer gradient-background__layer--1"></div>
+        <div class="gradient-background__layer gradient-background__layer--2"></div>
+        <div class="gradient-background__layer gradient-background__layer--3"></div>
+        <div class="gradient-background__layer gradient-background__layer--4"></div>
+        <div class="gradient-background__layer gradient-background__layer--5"></div>
+        <div class="gradient-background__overlay"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header__container">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html" class="logo__link">
+                    <div class="logo__content">
+                        <img src="assets/images/logo.png" alt="Logo Paco el Morlaco" class="logo__image">
+                        <div class="logo__text">Toma mi mano</div>
+                    </div>
+                </a>
+                <div class="logo__border"></div>
+            </div>
+
+            <!-- Navigation Admin -->
+            <nav class="nav nav--admin">
+                <div class="nav__backdrop"></div>
+                <div class="nav__item">
+                    <a href="admin-dashboard.html" class="nav__link">Dashboard</a>
+                </div>
+                <div class="nav__item nav__item--active">
+                    <a href="admin-solicitudes.html" class="nav__link">Solicitudes</a>
+                </div>
+                <div class="nav__item">
+                    <a href="admin-inventario.html" class="nav__link">Inventario</a>
+                </div>
+                <div class="nav__item">
+                    <a href="admin-reportes.html" class="nav__link">Reportes</a>
+                </div>
+                <div class="nav__item">
+                    <a href="admin-moderacion.html" class="nav__link">Moderación</a>
+                </div>
+            </nav>
+
+            <!-- User Menu -->
+            <div class="user-menu">
+                <button class="user-menu__button">
+                    <div class="user-menu__avatar">
+                        <img src="https://via.placeholder.com/45" alt="Avatar Admin">
+                    </div>
+                    <div class="user-menu__dropdown-icon"></div>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Dashboard Section -->
+            <section class="dashboard">
+                <!-- Title -->
+                <h1 class="dashboard__title">Gestionar Solicitudes</h1>
+                <p class="dashboard__subtitle">Revisa y gestiona las solicitudes de prótesis de los beneficiarios</p>
+
+                <!-- Filters -->
+                <div class="request-filters">
+                    <div class="form-group" style="flex: 1;">
+                        <label class="form-label">Estado</label>
+                        <select class="select">
+                            <option value="todas">Todas las solicitudes</option>
+                            <option value="pendiente" selected>Pendientes de revisión</option>
+                            <option value="aprobada">Aprobadas</option>
+                            <option value="rechazada">Rechazadas</option>
+                            <option value="completada">Completadas</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="flex: 1;">
+                        <label class="form-label">Tipo de prótesis</label>
+                        <select class="select">
+                            <option value="todas">Todas</option>
+                            <option value="pierna">Pierna</option>
+                            <option value="brazo">Brazo</option>
+                            <option value="mano">Mano</option>
+                            <option value="pie">Pie</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="flex: 1;">
+                        <label class="form-label">Ordenar por</label>
+                        <select class="select">
+                            <option value="fecha">Fecha de solicitud</option>
+                            <option value="nombre">Nombre</option>
+                            <option value="urgencia">Urgencia</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Requests Table -->
+                <div class="dashboard__section">
+                    <div class="table-container">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Beneficiario</th>
+                                    <th>Tipo de Prótesis</th>
+                                    <th>Fecha Solicitud</th>
+                                    <th>Estado</th>
+                                    <th>Urgencia</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#001</td>
+                                    <td>
+                                        <div class="table-user">
+                                            <img src="https://via.placeholder.com/40" alt="Avatar" class="table-user__avatar">
+                                            <div class="table-user__info">
+                                                <div class="table-user__name">María González</div>
+                                                <div class="table-user__email">maria@ejemplo.com</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Prótesis de Pierna</td>
+                                    <td>15/11/2025</td>
+                                    <td><span class="badge badge--pendiente">Pendiente</span></td>
+                                    <td><span class="badge badge--urgente">Alta</span></td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <button class="btn-icon" title="Ver detalles">
+                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12C23 12 19 20 12 20C5 20 1 12 1 12Z" stroke="#8AA0EA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="#8AA0EA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-icon btn-icon--success" title="Aprobar">
+                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18455 2.99721 7.13631 4.39828 5.49706C5.79935 3.85781 7.69279 2.71537 9.79619 2.24013C11.8996 1.7649 14.1003 1.98232 16.07 2.85999" stroke="#4CAF50" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M22 4L12 14.01L9 11.01" stroke="#4CAF50" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-icon btn-icon--danger" title="Rechazar">
+                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="12" cy="12" r="10" stroke="#F44336" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M15 9L9 15M9 9L15 15" stroke="#F44336" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#002</td>
+                                    <td>
+                                        <div class="table-user">
+                                            <img src="https://via.placeholder.com/40" alt="Avatar" class="table-user__avatar">
+                                            <div class="table-user__info">
+                                                <div class="table-user__name">Pedro Ramírez</div>
+                                                <div class="table-user__email">pedro@ejemplo.com</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Prótesis de Brazo</td>
+                                    <td>14/11/2025</td>
+                                    <td><span class="badge badge--pendiente">Pendiente</span></td>
+                                    <td><span class="badge badge--media">Media</span></td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <button class="btn-icon" title="Ver detalles">
+                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12C23 12 19 20 12 20C5 20 1 12 1 12Z" stroke="#8AA0EA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="#8AA0EA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-icon btn-icon--success" title="Aprobar">
+                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18455 2.99721 7.13631 4.39828 5.49706C5.79935 3.85781 7.69279 2.71537 9.79619 2.24013C11.8996 1.7649 14.1003 1.98232 16.07 2.85999" stroke="#4CAF50" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M22 4L12 14.01L9 11.01" stroke="#4CAF50" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-icon btn-icon--danger" title="Rechazar">
+                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="12" cy="12" r="10" stroke="#F44336" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M15 9L9 15M9 9L15 15" stroke="#F44336" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#003</td>
+                                    <td>
+                                        <div class="table-user">
+                                            <img src="https://via.placeholder.com/40" alt="Avatar" class="table-user__avatar">
+                                            <div class="table-user__info">
+                                                <div class="table-user__name">Ana Torres</div>
+                                                <div class="table-user__email">ana@ejemplo.com</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Prótesis de Mano</td>
+                                    <td>13/11/2025</td>
+                                    <td><span class="badge badge--aprobada">Aprobada</span></td>
+                                    <td><span class="badge badge--baja">Baja</span></td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <button class="btn-icon" title="Ver detalles">
+                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12C23 12 19 20 12 20C5 20 1 12 1 12Z" stroke="#8AA0EA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="#8AA0EA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-icon" title="Publicar campaña">
+                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12 5V19M5 12H19" stroke="#8AA0EA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#004</td>
+                                    <td>
+                                        <div class="table-user">
+                                            <img src="https://via.placeholder.com/40" alt="Avatar" class="table-user__avatar">
+                                            <div class="table-user__info">
+                                                <div class="table-user__name">Carlos Méndez</div>
+                                                <div class="table-user__email">carlos@ejemplo.com</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Prótesis de Rodilla</td>
+                                    <td>12/11/2025</td>
+                                    <td><span class="badge badge--rechazada">Rechazada</span></td>
+                                    <td><span class="badge badge--media">Media</span></td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <button class="btn-icon" title="Ver detalles">
+                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12C23 12 19 20 12 20C5 20 1 12 1 12Z" stroke="#8AA0EA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="#8AA0EA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#005</td>
+                                    <td>
+                                        <div class="table-user">
+                                            <img src="https://via.placeholder.com/40" alt="Avatar" class="table-user__avatar">
+                                            <div class="table-user__info">
+                                                <div class="table-user__name">Laura Sánchez</div>
+                                                <div class="table-user__email">laura@ejemplo.com</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Prótesis de Pie</td>
+                                    <td>10/11/2025</td>
+                                    <td><span class="badge badge--pendiente">Pendiente</span></td>
+                                    <td><span class="badge badge--urgente">Alta</span></td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <button class="btn-icon" title="Ver detalles">
+                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12C23 12 19 20 12 20C5 20 1 12 1 12Z" stroke="#8AA0EA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="#8AA0EA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-icon btn-icon--success" title="Aprobar">
+                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18455 2.99721 7.13631 4.39828 5.49706C5.79935 3.85781 7.69279 2.71537 9.79619 2.24013C11.8996 1.7649 14.1003 1.98232 16.07 2.85999" stroke="#4CAF50" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M22 4L12 14.01L9 11.01" stroke="#4CAF50" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </button>
+                                            <button class="btn-icon btn-icon--danger" title="Rechazar">
+                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="12" cy="12" r="10" stroke="#F44336" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M15 9L9 15M9 9L15 15" stroke="#F44336" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

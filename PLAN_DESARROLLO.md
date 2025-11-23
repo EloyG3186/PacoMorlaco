@@ -163,27 +163,27 @@ Desarrollar un prototipo de alta fidelidad navegable en HTML & CSS que cumpla co
 | 4 | Formulario de Donación | `donante-donacion.html` | ✅ Completado | 🔴 Alta |
 | 5 | Panel de Reportes Admin | `admin-reportes.html` | ✅ Completado | 🔴 Alta |
 
-### 🔄 FASE 2: Vistas Críticas Faltantes (7 vistas)
+### ✅ FASE 2: Vistas Críticas Faltantes (7 vistas) - COMPLETADA
 
 | # | Vista | Archivo | Requisitos | Estado | Prioridad |
 |---|-------|---------|------------|--------|-----------|
-| 6 | Iniciar Sesión | `login.html` | I2, T7-T9 | ⏳ Pendiente | 🔴 Alta |
-| 7 | Registrarse | `registro.html` | I1, T1-T6 | ⏳ Pendiente | 🔴 Alta |
-| 8 | Solicitar Prótesis | `beneficiario-solicitar.html` | I3, T10-T12 | ⏳ Pendiente | 🔴 Alta |
-| 9 | Gestionar Solicitudes | `admin-solicitudes.html` | I4, T13-T16 | ⏳ Pendiente | 🔴 Alta |
-| 10 | Gestionar Inventario | `admin-inventario.html` | I7, T23-T25 | ⏳ Pendiente | 🔴 Alta |
-| 11 | Publicar Actualización | `admin-actualizar-caso.html` | I9, T26-T27 | ⏳ Pendiente | 🔴 Alta |
-| 12 | Detalle de Campaña + Comentarios | `campana-detalle.html` | I6, I10, T29-T30 | ⏳ Pendiente | 🔴 Alta |
+| 6 | Iniciar Sesión | `login.html` | I2, T7-T9 | ✅ Completado | 🔴 Alta |
+| 7 | Registrarse | `registro.html` | I1, T1-T6 | ✅ Completado | 🔴 Alta |
+| 8 | Solicitar Prótesis | `beneficiario-solicitar.html` | I3, T10-T12 | ✅ Completado | 🔴 Alta |
+| 9 | Gestionar Solicitudes | `admin-solicitudes.html` | I4, T13-T16 | ✅ Completado | 🔴 Alta |
+| 10 | Gestionar Inventario | `admin-inventario.html` | I7, T23-T25 | ✅ Completado | 🔴 Alta |
+| 11 | Publicar Actualización | `admin-actualizar-caso.html` | I9, T26-T27 | ✅ Completado | 🔴 Alta |
+| 12 | Detalle de Campaña + Comentarios | `campana-detalle.html` | I6, I10, T29-T30 | ✅ Completado | 🔴 Alta |
 
-### 🟡 FASE 3: Vistas Secundarias (5 vistas)
+### ✅ FASE 3: Vistas Secundarias (5 vistas) - COMPLETADA
 
 | # | Vista | Archivo | Estado | Prioridad |
 |---|-------|---------|--------|-----------|
-| 13 | Dashboard Beneficiario | `beneficiario-dashboard.html` | ⏳ Pendiente | 🟡 Media |
-| 14 | Mis Solicitudes (Beneficiario) | `beneficiario-mis-solicitudes.html` | ⏳ Pendiente | 🟡 Media |
-| 15 | Dashboard Admin | `admin-dashboard.html` | ⏳ Pendiente | 🟡 Media |
-| 16 | Moderación de Comentarios | `admin-moderacion.html` | ⏳ Pendiente | 🟡 Media |
-| 17 | Mis Favoritos | `donante-favoritos.html` | ⏳ Pendiente | 🟡 Media |
+| 13 | Dashboard Admin | `admin-dashboard.html` | ✅ Completado | 🟡 Media |
+| 14 | Dashboard Beneficiario | `beneficiario-dashboard.html` | ✅ Completado | 🟡 Media |
+| 15 | Mis Solicitudes (Beneficiario) | `beneficiario-mis-solicitudes.html` | ✅ Completado | 🟡 Media |
+| 16 | Moderación de Comentarios | `admin-moderacion.html` | ✅ Completado | 🟡 Media |
+| 17 | Mis Favoritos | `donante-favoritos.html` | ✅ Completado | 🟡 Media |
 
 **Total de vistas**: 17
 
@@ -542,6 +542,318 @@ Desarrollar un prototipo de alta fidelidad navegable en HTML & CSS que cumpla co
 **Próximos pasos** (pendiente de aprobación del usuario):
 1. Iniciar Fase 2: Vistas críticas faltantes
 2. Desarrollar vistas secundarias (Fase 3)
+
+---
+
+### 2025-11-23 - Sesión 8: Vista 6 - Login (Iniciar Sesión)
+
+**Actividades realizadas**:
+- ✅ Creación de `login.html`
+- ✅ Formulario de inicio de sesión con:
+  - Campo de correo electrónico
+  - Campo de contraseña
+  - Checkbox "Recordarme"
+  - Link "¿Olvidaste tu contraseña?"
+  - Botón "Iniciar Sesión"
+- ✅ Divider "o continúa con"
+- ✅ Botones de login social:
+  - Google (con logo SVG)
+  - Facebook (con logo SVG)
+- ✅ Link a registro: "¿No tienes una cuenta? Regístrate aquí"
+- ✅ Nuevos estilos en `layout.css`:
+  - `.auth-section` - Sección centrada verticalmente
+  - `.auth-container`, `.auth-card` - Contenedor con glassmorphism
+  - `.auth-card__title`, `.auth-card__subtitle` - Títulos
+  - `.auth-form` - Formulario
+  - `.auth-options` - Recordarme y olvidaste contraseña
+  - `.auth-link` - Links con hover
+  - `.auth-divider` - Separador con línea
+  - `.social-login`, `.social-btn` - Botones sociales
+  - `.auth-footer` - Footer con link a registro
+
+**Componentes utilizados**:
+- Auth card con glassmorphism
+- Form inputs (email, password)
+- Checkbox
+- Social buttons con SVG icons
+- Links con hover effects
+
+**Archivos creados**:
+- `login.html` ✅
+
+**Archivos modificados**:
+- `css/layout.css` - Estilos de autenticación (+137 líneas)
+
+**Progreso**:
+- **Fase 1**: 5/5 vistas completadas (100%) ✅
+- **Fase 2**: 1/7 vistas completadas (14.3%)
+- **Total general**: 6/17 vistas completadas (35.3%)
+
+**Próximos pasos** (pendiente de aprobación del usuario):
+1. Vista 7: Registro (`registro.html`)
+2. Vista 8: Solicitar Prótesis (`beneficiario-solicitar.html`)
+3. Vista 9: Gestionar Solicitudes (`admin-solicitudes.html`)
+
+---
+
+### 2025-11-23 - Sesión 9: Vista 7 - Registro
+
+**Actividades realizadas**:
+- ✅ Creación de `registro.html`
+- ✅ Selector de tipo de usuario:
+  - Card "Donante" con icono de corazón
+  - Card "Beneficiario" con icono de persona
+  - Estado seleccionado con fondo azul y texto blanco
+  - Hover effects con elevación
+- ✅ Formulario de registro completo:
+  - Nombre y Apellido (2 columnas)
+  - Correo electrónico
+  - Contraseña y Confirmar contraseña (2 columnas)
+  - Checkbox términos y condiciones con links
+  - Botón "Crear Cuenta"
+- ✅ Divider "o regístrate con"
+- ✅ Botones de registro social (Google, Facebook)
+- ✅ Link a login: "¿Ya tienes una cuenta? Inicia sesión aquí"
+- ✅ Nuevos estilos en `components.css`:
+  - `.user-type-selector` - Grid 2 columnas
+  - `.user-type-option` - Label clickeable
+  - `.user-type-card` - Card con glassmorphism
+  - Estados: hover (elevación), checked (fondo azul)
+  - Transiciones en SVG icons
+
+**Componentes utilizados**:
+- User type selector (nuevo componente)
+- Form inputs (text, email, password)
+- Checkbox con links inline
+- Social buttons
+- Auth card (max-width: 650px)
+
+**Archivos creados**:
+- `registro.html` ✅
+
+**Archivos modificados**:
+- `css/components.css` - User type selector (+76 líneas)
+
+**Progreso**:
+- **Fase 1**: 5/5 vistas completadas (100%) ✅
+- **Fase 2**: 2/7 vistas completadas (28.6%)
+- **Total general**: 7/17 vistas completadas (41.2%)
+
+**Próximos pasos** (pendiente de aprobación del usuario):
+1. Vista 8: Solicitar Prótesis (`beneficiario-solicitar.html`)
+2. Vista 9: Gestionar Solicitudes (`admin-solicitudes.html`)
+3. Vista 10: Gestionar Inventario (`admin-inventario.html`)
+
+---
+
+### 2025-11-23 - Sesión 10: Vista 8 - Solicitar Prótesis
+
+**Actividades realizadas**:
+- ✅ Creación de `beneficiario-solicitar.html`
+- ✅ Navegación de beneficiario (3 items)
+- ✅ Formulario extenso dividido en 5 secciones:
+  
+  **1. Información Personal:**
+  - Nombre completo, Fecha de nacimiento
+  - Teléfono, Correo electrónico
+  - Dirección completa
+  
+  **2. Información Médica:**
+  - Tipo de prótesis (select: pierna, brazo, mano, pie, rodilla, otra)
+  - Lado afectado (izquierdo, derecho, ambos)
+  - Causa de amputación (accidente, enfermedad, congénito, otra)
+  - Fecha de amputación
+  - Descripción médica detallada (textarea)
+  
+  **3. Tu Historia:**
+  - Cuéntanos tu historia (textarea 6 filas)
+  - ¿Cómo mejoraría tu vida? (textarea 4 filas)
+  
+  **4. Información Económica:**
+  - Situación laboral (select)
+  - Ingresos mensuales (select con rangos)
+  - Seguro médico (radio: sí, no, parcial)
+  
+  **5. Documentación:**
+  - Informe médico (PDF, máx. 5MB)
+  - Fotografía personal (JPG/PNG, máx. 2MB)
+  - Documentación adicional (opcional, múltiple)
+  - 2 Checkboxes de aceptación
+
+- ✅ Nuevos estilos en `components.css`:
+  - `.request-form-container`, `.request-form`
+  - `.form-help` - Texto de ayuda
+  - `.input-file` - Input de archivo con botón estilizado
+  - `.input-file::file-selector-button` - Botón personalizado
+  - `.radio-group`, `.radio-label` - Grupo de radios
+
+- ✅ Nuevos estilos en `layout.css`:
+  - `.dashboard__subtitle` - Subtítulo del dashboard
+
+**Componentes utilizados**:
+- Form sections (5 secciones)
+- Inputs (text, email, tel, date)
+- Selects (múltiples opciones)
+- Textareas (3 diferentes)
+- File inputs (3, con estilos personalizados)
+- Radio buttons group
+- Checkboxes (2 de aceptación)
+- Botón submit con icono
+
+**Archivos creados**:
+- `beneficiario-solicitar.html` ✅
+
+**Archivos modificados**:
+- `css/components.css` - Request form (+81 líneas)
+- `css/layout.css` - Dashboard subtitle (+9 líneas)
+
+**Progreso**:
+- **Fase 1**: 5/5 vistas completadas (100%) ✅
+- **Fase 2**: 3/7 vistas completadas (42.9%)
+- **Total general**: 8/17 vistas completadas (47.1%)
+
+**Próximos pasos** (pendiente de aprobación del usuario):
+1. Vista 10: Gestionar Inventario (`admin-inventario.html`)
+2. Vista 11: Publicar Actualización (`admin-actualizar-caso.html`)
+3. Vista 12: Detalle de Campaña + Comentarios (`campana-detalle.html`)
+
+---
+
+### 2025-11-23 - Sesión 11: Vista 9 - Gestionar Solicitudes (Admin)
+
+**Actividades realizadas**:
+- ✅ Creación de `admin-solicitudes.html`
+- ✅ Filtros de solicitudes (3 selects): Estado, Tipo de prótesis, Ordenar por
+- ✅ Tabla de solicitudes con 7 columnas:
+  - ID, Beneficiario (avatar + nombre + email), Tipo de Prótesis, Fecha, Estado, Urgencia, Acciones
+- ✅ 5 solicitudes de ejemplo con diferentes estados
+- ✅ Componente table-user con avatar circular
+- ✅ Badges de urgencia: Alta (rojo), Media (naranja), Baja (verde)
+- ✅ Botones de acción: Ver detalles, Aprobar (verde), Rechazar (rojo)
+- ✅ Nuevos estilos en `components.css` (+97 líneas):
+  - `.request-filters` - Filtros de solicitudes
+  - `.table-user`, `.table-user__avatar`, `.table-user__info` - Usuario en tabla
+  - `.table-actions` - Acciones de tabla
+  - `.badge--urgente`, `.badge--media`, `.badge--baja` - Badges de urgencia
+  - `.btn-icon--success`, `.btn-icon--danger` - Variantes de botones
+
+**Archivos creados**:
+- `admin-solicitudes.html` ✅
+
+**Archivos modificados**:
+- `css/components.css` - Request filters y table user (+97 líneas)
+
+**Progreso**:
+- **Fase 1**: 5/5 vistas (100%) ✅
+- **Fase 2**: 4/7 vistas (57.1%)
+- **Total general**: 9/17 vistas (52.9%) 🎉 **¡Más del 50%!**
+
+**Próximos pasos**:
+1. Vista 11: Publicar Actualización
+2. Vista 12: Detalle de Campaña + Comentarios
+
+---
+
+### 2025-11-23 - Sesión 12: Vista 10 - Gestionar Inventario (Admin)
+
+**Actividades realizadas**:
+- ✅ Creación de `admin-inventario.html`
+- ✅ Dashboard header con botón "Agregar Prótesis"
+- ✅ 4 Stat cards con iconos:
+  - Total Prótesis: 48 (azul)
+  - Disponibles: 32 (verde)
+  - En Proceso: 12 (naranja)
+  - Stock Bajo: 4 (rojo)
+- ✅ Filtros: Tipo, Estado, Proveedor
+- ✅ Tabla de inventario (8 columnas): ID, Tipo, Modelo, Proveedor, Stock, Estado, Precio, Acciones
+- ✅ 3 productos de ejemplo con stock badges
+- ✅ Botones: Ver, Editar, Eliminar
+- ✅ Nuevos estilos (+120 líneas):
+  - `.inventory-stats`, `.stat-card` - Cards de estadísticas
+  - `.stat-card__icon` con variantes de color
+  - `.stock-badge` con variantes (high, medium, low)
+  - `.dashboard-header` - Header con botón
+
+**Archivos creados**:
+- `admin-inventario.html` ✅
+
+**Archivos modificados**:
+- `css/components.css` (+113 líneas)
+- `css/layout.css` (+6 líneas)
+
+**Progreso**:
+- **Fase 1**: 5/5 (100%) ✅
+- **Fase 2**: 5/7 (71.4%)
+- **Total**: 10/17 (58.8%)
+
+---
+
+### 2025-11-23 - Sesión 13: Vista 11 - Publicar Actualización (Admin)
+
+**Actividades realizadas**:
+- ✅ Creación de `admin-actualizar-caso.html`
+- ✅ 4 secciones de formulario:
+  1. Selección de campaña (select)
+  2. Contenido: Título, Tipo, Mensaje (textarea)
+  3. Multimedia: Imágenes (múltiple), Video
+  4. Visibilidad: Radio group, Checkboxes de notificación
+- ✅ Vista previa de actualización:
+  - Avatar + Autor + Fecha + Badge
+  - Título y texto de ejemplo
+  - Botones: Me gusta, Comentar
+- ✅ Botones de acción: Guardar borrador, Publicar
+- ✅ Nuevos estilos (+120 líneas):
+  - `.update-form-container`, `.update-form`
+  - `.form-actions` - Botones alineados a la derecha
+  - `.update-preview` - Card de vista previa
+  - `.update-preview__header/avatar/info/content/footer`
+  - `.update-preview__action` - Botones con hover
+
+**Archivos creados**:
+- `admin-actualizar-caso.html` ✅
+
+**Archivos modificados**:
+- `css/components.css` (+120 líneas)
+
+**Progreso**:
+- **Fase 1**: 5/5 (100%) ✅
+- **Fase 2**: 6/7 (85.7%)
+- **Total**: 11/17 (64.7%)
+
+---
+
+### 2025-11-23 - Sesión 14: Vista 12 - Detalle de Campaña + Comentarios ✅ FASE 2 COMPLETADA
+
+**Actividades realizadas**:
+- ✅ Creación de `campana-detalle.html`
+- ✅ Hero de campaña con imagen (400px height)
+- ✅ Layout 2 columnas: Main content + Sidebar
+- ✅ Sección Historia con 3 párrafos
+- ✅ Actualizaciones (2 cards)
+- ✅ Sección de Comentarios:
+  - Formulario de comentario con avatar
+  - 3 comentarios con avatar, autor, fecha
+  - Botones: Me gusta (con contador), Responder
+- ✅ Sidebar:
+  - Donation card: Monto, progreso, stats, botón
+  - Beneficiary card: Avatar, info, detalles
+  - Top donors card: 3 donantes con avatares
+- ✅ Nuevo archivo CSS: `campaign-detail.css` (+390 líneas)
+- ✅ Estilos en `layout.css` (+104 líneas)
+
+**Archivos creados**:
+- `campana-detalle.html` ✅
+- `css/campaign-detail.css` ✅
+
+**Archivos modificados**:
+- `css/layout.css` (+104 líneas)
+
+**Progreso**:
+- **Fase 1**: 5/5 (100%) ✅ COMPLETADA
+- **Fase 2**: 7/7 (100%) ✅ COMPLETADA
+- **Total**: 12/17 (70.6%)
+
+**🎉 FASE 2 COMPLETADA - Todas las vistas críticas implementadas**
 
 ---
 

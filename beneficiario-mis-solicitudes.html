@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Solicitudes - Paco el Morlaco</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300;1,400;1,500;1,700;1,800&family=Montserrat+Alternates:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+    <div class="gradient-background">
+        <div class="gradient-background__layer gradient-background__layer--1"></div>
+        <div class="gradient-background__layer gradient-background__layer--2"></div>
+        <div class="gradient-background__layer gradient-background__layer--3"></div>
+        <div class="gradient-background__layer gradient-background__layer--4"></div>
+        <div class="gradient-background__layer gradient-background__layer--5"></div>
+        <div class="gradient-background__overlay"></div>
+    </div>
+
+    <header class="header">
+        <div class="header__container">
+            <div class="logo">
+                <a href="index.html" class="logo__link">
+                    <div class="logo__content">
+                        <img src="assets/images/logo.png" alt="Logo Paco el Morlaco" class="logo__image">
+                        <div class="logo__text">Toma mi mano</div>
+                    </div>
+                </a>
+                <div class="logo__border"></div>
+            </div>
+            <nav class="nav nav--beneficiario">
+                <div class="nav__backdrop"></div>
+                <div class="nav__item"><a href="beneficiario-dashboard.html" class="nav__link">Dashboard</a></div>
+                <div class="nav__item"><a href="beneficiario-solicitar.html" class="nav__link">Solicitar Prótesis</a></div>
+                <div class="nav__item nav__item--active"><a href="beneficiario-mis-solicitudes.html" class="nav__link">Mis Solicitudes</a></div>
+            </nav>
+            <div class="user-menu">
+                <button class="user-menu__button">
+                    <div class="user-menu__avatar"><img src="https://via.placeholder.com/45" alt="Avatar"></div>
+                    <div class="user-menu__dropdown-icon"></div>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <section class="dashboard">
+                <h1 class="dashboard__title">Mis Solicitudes</h1>
+                <p class="dashboard__subtitle">Historial de todas tus solicitudes de prótesis</p>
+
+                <!-- Solicitudes List -->
+                <div class="solicitudes-list">
+                    <!-- Solicitud Aprobada -->
+                    <div class="solicitud-card solicitud-card--aprobada">
+                        <div class="solicitud-card__header">
+                            <div class="solicitud-card__info">
+                                <h3 class="solicitud-card__title">Prótesis de Pierna</h3>
+                                <p class="solicitud-card__date">Solicitada el 15 de octubre, 2025</p>
+                            </div>
+                            <span class="badge badge--aprobada">Aprobada</span>
+                        </div>
+                        <div class="solicitud-card__body">
+                            <div class="solicitud-card__details">
+                                <div class="solicitud-card__detail">
+                                    <span class="solicitud-card__label">Tipo:</span>
+                                    <span class="solicitud-card__value">Prótesis de Pierna</span>
+                                </div>
+                                <div class="solicitud-card__detail">
+                                    <span class="solicitud-card__label">Lado:</span>
+                                    <span class="solicitud-card__value">Izquierdo</span>
+                                </div>
+                                <div class="solicitud-card__detail">
+                                    <span class="solicitud-card__label">Estado de campaña:</span>
+                                    <span class="solicitud-card__value">Activa - 75% completado</span>
+                                </div>
+                            </div>
+                            <p class="solicitud-card__message">
+                                ¡Buenas noticias! Tu solicitud ha sido aprobada y tu campaña está activa. Ya has recaudado €3,750 de €5,000.
+                            </p>
+                            <div class="solicitud-card__actions">
+                                <a href="beneficiario-dashboard.html" class="btn-primary-text">Ver Campaña</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Solicitud Pendiente -->
+                    <div class="solicitud-card solicitud-card--pendiente">
+                        <div class="solicitud-card__header">
+                            <div class="solicitud-card__info">
+                                <h3 class="solicitud-card__title">Prótesis de Rodilla</h3>
+                                <p class="solicitud-card__date">Solicitada el 20 de noviembre, 2025</p>
+                            </div>
+                            <span class="badge badge--pendiente">En Revisión</span>
+                        </div>
+                        <div class="solicitud-card__body">
+                            <div class="solicitud-card__details">
+                                <div class="solicitud-card__detail">
+                                    <span class="solicitud-card__label">Tipo:</span>
+                                    <span class="solicitud-card__value">Prótesis de Rodilla</span>
+                                </div>
+                                <div class="solicitud-card__detail">
+                                    <span class="solicitud-card__label">Lado:</span>
+                                    <span class="solicitud-card__value">Derecho</span>
+                                </div>
+                            </div>
+                            <p class="solicitud-card__message">
+                                Tu solicitud está siendo revisada por nuestro equipo. Te notificaremos cuando tengamos una respuesta.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Solicitud Rechazada -->
+                    <div class="solicitud-card solicitud-card--rechazada">
+                        <div class="solicitud-card__header">
+                            <div class="solicitud-card__info">
+                                <h3 class="solicitud-card__title">Prótesis de Brazo</h3>
+                                <p class="solicitud-card__date">Solicitada el 5 de septiembre, 2025</p>
+                            </div>
+                            <span class="badge badge--rechazada">Rechazada</span>
+                        </div>
+                        <div class="solicitud-card__body">
+                            <div class="solicitud-card__details">
+                                <div class="solicitud-card__detail">
+                                    <span class="solicitud-card__label">Tipo:</span>
+                                    <span class="solicitud-card__value">Prótesis de Brazo</span>
+                                </div>
+                                <div class="solicitud-card__detail">
+                                    <span class="solicitud-card__label">Lado:</span>
+                                    <span class="solicitud-card__value">Izquierdo</span>
+                                </div>
+                            </div>
+                            <p class="solicitud-card__message">
+                                Lamentablemente, tu solicitud no pudo ser aprobada debido a documentación incompleta. Puedes volver a solicitar con la documentación correcta.
+                            </p>
+                            <div class="solicitud-card__actions">
+                                <a href="beneficiario-solicitar.html" class="btn-secondary">Nueva Solicitud</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Empty State (commented for reference) -->
+                <!-- <div class="empty-state">
+                    <svg width="120" height="120" viewBox="0 0 24 24" fill="none">
+                        <path d="M9 11L12 14L22 4M21 12V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H16" stroke="#8AA0EA" stroke-width="1.5"/>
+                    </svg>
+                    <h3 class="empty-state__title">No tienes solicitudes</h3>
+                    <p class="empty-state__desc">Aún no has realizado ninguna solicitud de prótesis.</p>
+                    <a href="beneficiario-solicitar.html" class="btn-primary-text">Crear Primera Solicitud</a>
+                </div> -->
+            </section>
+        </div>
+    </main>
+</body>
+</html>

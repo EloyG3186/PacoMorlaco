@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moderación de Comentarios - Paco el Morlaco</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300;1,400;1,500;1,700;1,800&family=Montserrat+Alternates:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+    <div class="gradient-background">
+        <div class="gradient-background__layer gradient-background__layer--1"></div>
+        <div class="gradient-background__layer gradient-background__layer--2"></div>
+        <div class="gradient-background__layer gradient-background__layer--3"></div>
+        <div class="gradient-background__layer gradient-background__layer--4"></div>
+        <div class="gradient-background__layer gradient-background__layer--5"></div>
+        <div class="gradient-background__overlay"></div>
+    </div>
+
+    <header class="header">
+        <div class="header__container">
+            <div class="logo">
+                <a href="index.html" class="logo__link">
+                    <div class="logo__content">
+                        <img src="assets/images/logo.png" alt="Logo Paco el Morlaco" class="logo__image">
+                        <div class="logo__text">Toma mi mano</div>
+                    </div>
+                </a>
+                <div class="logo__border"></div>
+            </div>
+            <nav class="nav nav--admin">
+                <div class="nav__backdrop"></div>
+                <div class="nav__item"><a href="admin-dashboard.html" class="nav__link">Dashboard</a></div>
+                <div class="nav__item"><a href="admin-solicitudes.html" class="nav__link">Solicitudes</a></div>
+                <div class="nav__item"><a href="admin-inventario.html" class="nav__link">Inventario</a></div>
+                <div class="nav__item"><a href="admin-reportes.html" class="nav__link">Reportes</a></div>
+                <div class="nav__item nav__item--active"><a href="admin-moderacion.html" class="nav__link">Moderación</a></div>
+            </nav>
+            <div class="user-menu">
+                <button class="user-menu__button">
+                    <div class="user-menu__avatar"><img src="https://via.placeholder.com/45" alt="Avatar Admin"></div>
+                    <div class="user-menu__dropdown-icon"></div>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <section class="dashboard">
+                <h1 class="dashboard__title">Moderación de Comentarios</h1>
+                <p class="dashboard__subtitle">Revisa y modera los comentarios reportados</p>
+
+                <!-- Stats -->
+                <div class="dashboard__kpis">
+                    <div class="card-kpi">
+                        <div class="card-kpi__value">3</div>
+                        <div class="card-kpi__label">Comentarios Reportados</div>
+                        <div class="card-kpi__change card-kpi__change--warning">Requieren revisión</div>
+                    </div>
+                    <div class="card-kpi">
+                        <div class="card-kpi__value">45</div>
+                        <div class="card-kpi__label">Comentarios Aprobados</div>
+                        <div class="card-kpi__change">Esta semana</div>
+                    </div>
+                    <div class="card-kpi">
+                        <div class="card-kpi__value">2</div>
+                        <div class="card-kpi__label">Comentarios Eliminados</div>
+                        <div class="card-kpi__change">Esta semana</div>
+                    </div>
+                </div>
+
+                <!-- Reported Comments -->
+                <div class="dashboard__section">
+                    <h2 class="section-title">Comentarios Reportados</h2>
+                    <div class="moderation-list">
+                        <div class="moderation-item">
+                            <div class="moderation-item__header">
+                                <div class="moderation-item__user">
+                                    <img src="https://via.placeholder.com/45" alt="Avatar" class="moderation-item__avatar">
+                                    <div>
+                                        <div class="moderation-item__name">Usuario Anónimo</div>
+                                        <div class="moderation-item__date">Hace 2 horas</div>
+                                    </div>
+                                </div>
+                                <span class="badge badge--urgente">Reportado</span>
+                            </div>
+                            <div class="moderation-item__content">
+                                <p class="moderation-item__text">Este comentario contiene lenguaje inapropiado y no cumple con las normas de la comunidad.</p>
+                                <div class="moderation-item__meta">
+                                    <span>Campaña: Prótesis de Pierna para María</span>
+                                    <span>Reportes: 3</span>
+                                </div>
+                            </div>
+                            <div class="moderation-item__actions">
+                                <button class="btn-icon btn-icon--success" title="Aprobar">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18455 2.99721 7.13631 4.39828 5.49706C5.79935 3.85781 7.69279 2.71537 9.79619 2.24013C11.8996 1.7649 14.1003 1.98232 16.07 2.85999" stroke="#4CAF50" stroke-width="1.5"/>
+                                        <path d="M22 4L12 14.01L9 11.01" stroke="#4CAF50" stroke-width="1.5"/>
+                                    </svg>
+                                </button>
+                                <button class="btn-icon btn-icon--danger" title="Eliminar">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M3 6H5H21M8 6V4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2H14C14.5304 2 15.0391 2.21071 15.4142 2.58579C15.7893 2.96086 16 3.46957 16 4V6M19 6V20C19 20.5304 18.7893 21.0391 18.4142 21.4142C18.0391 21.7893 17.5304 22 17 22H7C6.46957 22 5.96086 21.7893 5.58579 21.4142C5.21071 21.0391 5 20.5304 5 20V6H19Z" stroke="#F44336" stroke-width="1.5"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="moderation-item">
+                            <div class="moderation-item__header">
+                                <div class="moderation-item__user">
+                                    <img src="https://via.placeholder.com/45" alt="Avatar" class="moderation-item__avatar">
+                                    <div>
+                                        <div class="moderation-item__name">Usuario Spam</div>
+                                        <div class="moderation-item__date">Hace 5 horas</div>
+                                    </div>
+                                </div>
+                                <span class="badge badge--urgente">Reportado</span>
+                            </div>
+                            <div class="moderation-item__content">
+                                <p class="moderation-item__text">Visita mi sitio web para ganar dinero fácil. Link en mi perfil.</p>
+                                <div class="moderation-item__meta">
+                                    <span>Campaña: Prótesis de Brazo para Pedro</span>
+                                    <span>Reportes: 5</span>
+                                </div>
+                            </div>
+                            <div class="moderation-item__actions">
+                                <button class="btn-icon btn-icon--success" title="Aprobar">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18455 2.99721 7.13631 4.39828 5.49706C5.79935 3.85781 7.69279 2.71537 9.79619 2.24013C11.8996 1.7649 14.1003 1.98232 16.07 2.85999" stroke="#4CAF50" stroke-width="1.5"/>
+                                        <path d="M22 4L12 14.01L9 11.01" stroke="#4CAF50" stroke-width="1.5"/>
+                                    </svg>
+                                </button>
+                                <button class="btn-icon btn-icon--danger" title="Eliminar">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M3 6H5H21M8 6V4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2H14C14.5304 2 15.0391 2.21071 15.4142 2.58579C15.7893 2.96086 16 3.46957 16 4V6M19 6V20C19 20.5304 18.7893 21.0391 18.4142 21.4142C18.0391 21.7893 17.5304 22 17 22H7C6.46957 22 5.96086 21.7893 5.58579 21.4142C5.21071 21.0391 5 20.5304 5 20V6H19Z" stroke="#F44336" stroke-width="1.5"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="moderation-item">
+                            <div class="moderation-item__header">
+                                <div class="moderation-item__user">
+                                    <img src="https://via.placeholder.com/45" alt="Avatar" class="moderation-item__avatar">
+                                    <div>
+                                        <div class="moderation-item__name">Usuario Troll</div>
+                                        <div class="moderation-item__date">Hace 1 día</div>
+                                    </div>
+                                </div>
+                                <span class="badge badge--urgente">Reportado</span>
+                            </div>
+                            <div class="moderation-item__content">
+                                <p class="moderation-item__text">Comentario ofensivo que ataca personalmente al beneficiario.</p>
+                                <div class="moderation-item__meta">
+                                    <span>Campaña: Prótesis de Mano para Ana</span>
+                                    <span>Reportes: 7</span>
+                                </div>
+                            </div>
+                            <div class="moderation-item__actions">
+                                <button class="btn-icon btn-icon--success" title="Aprobar">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18455 2.99721 7.13631 4.39828 5.49706C5.79935 3.85781 7.69279 2.71537 9.79619 2.24013C11.8996 1.7649 14.1003 1.98232 16.07 2.85999" stroke="#4CAF50" stroke-width="1.5"/>
+                                        <path d="M22 4L12 14.01L9 11.01" stroke="#4CAF50" stroke-width="1.5"/>
+                                    </svg>
+                                </button>
+                                <button class="btn-icon btn-icon--danger" title="Eliminar">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M3 6H5H21M8 6V4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2H14C14.5304 2 15.0391 2.21071 15.4142 2.58579C15.7893 2.96086 16 3.46957 16 4V6M19 6V20C19 20.5304 18.7893 21.0391 18.4142 21.4142C18.0391 21.7893 17.5304 22 17 22H7C6.46957 22 5.96086 21.7893 5.58579 21.4142C5.21071 21.0391 5 20.5304 5 20V6H19Z" stroke="#F44336" stroke-width="1.5"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

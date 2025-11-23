@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar Prótesis - Paco el Morlaco</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300;1,400;1,500;1,700;1,800&family=Montserrat+Alternates:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+    <!-- Background Gradients -->
+    <div class="gradient-background">
+        <div class="gradient-background__layer gradient-background__layer--1"></div>
+        <div class="gradient-background__layer gradient-background__layer--2"></div>
+        <div class="gradient-background__layer gradient-background__layer--3"></div>
+        <div class="gradient-background__layer gradient-background__layer--4"></div>
+        <div class="gradient-background__layer gradient-background__layer--5"></div>
+        <div class="gradient-background__overlay"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header__container">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html" class="logo__link">
+                    <div class="logo__content">
+                        <img src="assets/images/logo.png" alt="Logo Paco el Morlaco" class="logo__image">
+                        <div class="logo__text">Toma mi mano</div>
+                    </div>
+                </a>
+                <div class="logo__border"></div>
+            </div>
+
+            <!-- Navigation Beneficiario -->
+            <nav class="nav nav--beneficiario">
+                <div class="nav__backdrop"></div>
+                <div class="nav__item">
+                    <a href="beneficiario-dashboard.html" class="nav__link">Dashboard</a>
+                </div>
+                <div class="nav__item nav__item--active">
+                    <a href="beneficiario-solicitar.html" class="nav__link">Solicitar Prótesis</a>
+                </div>
+                <div class="nav__item">
+                    <a href="beneficiario-mis-solicitudes.html" class="nav__link">Mis Solicitudes</a>
+                </div>
+            </nav>
+
+            <!-- User Menu -->
+            <div class="user-menu">
+                <button class="user-menu__button">
+                    <div class="user-menu__avatar">
+                        <img src="https://via.placeholder.com/45" alt="Avatar">
+                    </div>
+                    <div class="user-menu__dropdown-icon"></div>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Dashboard Section -->
+            <section class="dashboard">
+                <!-- Title -->
+                <h1 class="dashboard__title">Solicitar Prótesis</h1>
+                <p class="dashboard__subtitle">Completa el formulario para iniciar tu solicitud de prótesis</p>
+
+                <!-- Request Form -->
+                <div class="request-form-container">
+                    <form class="request-form">
+                        <!-- Personal Information -->
+                        <div class="form-section">
+                            <h2 class="form-section-title">Información Personal</h2>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label">Nombre completo</label>
+                                    <input type="text" class="input" placeholder="Juan Pérez García" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Fecha de nacimiento</label>
+                                    <input type="date" class="input" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label">Teléfono</label>
+                                    <input type="tel" class="input" placeholder="+34 600 000 000" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Correo electrónico</label>
+                                    <input type="email" class="input" placeholder="juan@ejemplo.com" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Dirección completa</label>
+                                <input type="text" class="input" placeholder="Calle, número, ciudad, código postal" required>
+                            </div>
+                        </div>
+
+                        <!-- Medical Information -->
+                        <div class="form-section">
+                            <h2 class="form-section-title">Información Médica</h2>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label">Tipo de prótesis necesaria</label>
+                                    <select class="select" required>
+                                        <option value="">Selecciona una opción</option>
+                                        <option value="pierna">Prótesis de Pierna</option>
+                                        <option value="brazo">Prótesis de Brazo</option>
+                                        <option value="mano">Prótesis de Mano</option>
+                                        <option value="pie">Prótesis de Pie</option>
+                                        <option value="rodilla">Prótesis de Rodilla</option>
+                                        <option value="otra">Otra</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Lado afectado</label>
+                                    <select class="select" required>
+                                        <option value="">Selecciona una opción</option>
+                                        <option value="izquierdo">Izquierdo</option>
+                                        <option value="derecho">Derecho</option>
+                                        <option value="ambos">Ambos</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Causa de la amputación</label>
+                                <select class="select" required>
+                                    <option value="">Selecciona una opción</option>
+                                    <option value="accidente">Accidente</option>
+                                    <option value="enfermedad">Enfermedad</option>
+                                    <option value="congenito">Congénito</option>
+                                    <option value="otra">Otra</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Fecha aproximada de la amputación</label>
+                                <input type="date" class="input" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Descripción médica detallada</label>
+                                <textarea class="textarea" rows="5" placeholder="Describe tu situación médica, nivel de amputación, condiciones de salud relevantes, etc." required></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Personal Story -->
+                        <div class="form-section">
+                            <h2 class="form-section-title">Tu Historia</h2>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Cuéntanos tu historia</label>
+                                <textarea class="textarea" rows="6" placeholder="Comparte tu historia personal, cómo ha afectado tu vida y por qué necesitas esta prótesis. Esta información ayudará a los donantes a conectar con tu caso." required></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">¿Cómo mejoraría tu vida esta prótesis?</label>
+                                <textarea class="textarea" rows="4" placeholder="Describe cómo una prótesis cambiaría tu día a día, tus metas y aspiraciones." required></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Economic Information -->
+                        <div class="form-section">
+                            <h2 class="form-section-title">Información Económica</h2>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label">Situación laboral</label>
+                                    <select class="select" required>
+                                        <option value="">Selecciona una opción</option>
+                                        <option value="empleado">Empleado</option>
+                                        <option value="desempleado">Desempleado</option>
+                                        <option value="estudiante">Estudiante</option>
+                                        <option value="jubilado">Jubilado</option>
+                                        <option value="autonomo">Autónomo</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Ingresos mensuales aproximados</label>
+                                    <select class="select" required>
+                                        <option value="">Selecciona una opción</option>
+                                        <option value="0-500">0 - 500€</option>
+                                        <option value="500-1000">500 - 1,000€</option>
+                                        <option value="1000-1500">1,000 - 1,500€</option>
+                                        <option value="1500+">Más de 1,500€</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">¿Tienes seguro médico que cubra parte del costo?</label>
+                                <div class="radio-group">
+                                    <label class="radio-label">
+                                        <input type="radio" name="insurance" value="si" class="radio">
+                                        <span>Sí</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="insurance" value="no" class="radio" checked>
+                                        <span>No</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="insurance" value="parcial" class="radio">
+                                        <span>Parcialmente</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Documentation -->
+                        <div class="form-section">
+                            <h2 class="form-section-title">Documentación</h2>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Informe médico (PDF, máx. 5MB)</label>
+                                <input type="file" class="input-file" accept=".pdf" required>
+                                <p class="form-help">Sube el informe médico que certifique tu necesidad de prótesis</p>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Fotografía personal (JPG/PNG, máx. 2MB)</label>
+                                <input type="file" class="input-file" accept="image/*" required>
+                                <p class="form-help">Una foto tuya que se mostrará en tu campaña</p>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Documentación adicional (opcional)</label>
+                                <input type="file" class="input-file" accept=".pdf,image/*" multiple>
+                                <p class="form-help">Puedes subir documentos adicionales que respalden tu solicitud</p>
+                            </div>
+                        </div>
+
+                        <!-- Terms -->
+                        <div class="form-section">
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" class="checkbox" required>
+                                    <span>Declaro que toda la información proporcionada es verídica y acepto que será verificada por el equipo de Paco el Morlaco</span>
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" class="checkbox" required>
+                                    <span>Autorizo la publicación de mi historia y fotografía en la plataforma para recaudar fondos</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div style="text-align: center; margin-top: 40px;">
+                            <button type="submit" class="btn-primary-text" style="min-width: 300px;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18455 2.99721 7.13631 4.39828 5.49706C5.79935 3.85781 7.69279 2.71537 9.79619 2.24013C11.8996 1.7649 14.1003 1.98232 16.07 2.85999" stroke="#8AA0EA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M22 4L12 14.01L9 11.01" stroke="#8AA0EA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Enviar Solicitud
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

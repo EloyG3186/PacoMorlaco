@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Beneficiario - Paco el Morlaco</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300;1,400;1,500;1,700;1,800&family=Montserrat+Alternates:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+    <div class="gradient-background">
+        <div class="gradient-background__layer gradient-background__layer--1"></div>
+        <div class="gradient-background__layer gradient-background__layer--2"></div>
+        <div class="gradient-background__layer gradient-background__layer--3"></div>
+        <div class="gradient-background__layer gradient-background__layer--4"></div>
+        <div class="gradient-background__layer gradient-background__layer--5"></div>
+        <div class="gradient-background__overlay"></div>
+    </div>
+
+    <header class="header">
+        <div class="header__container">
+            <div class="logo">
+                <a href="index.html" class="logo__link">
+                    <div class="logo__content">
+                        <img src="assets/images/logo.png" alt="Logo Paco el Morlaco" class="logo__image">
+                        <div class="logo__text">Toma mi mano</div>
+                    </div>
+                </a>
+                <div class="logo__border"></div>
+            </div>
+            <nav class="nav nav--beneficiario">
+                <div class="nav__backdrop"></div>
+                <div class="nav__item nav__item--active"><a href="beneficiario-dashboard.html" class="nav__link">Dashboard</a></div>
+                <div class="nav__item"><a href="beneficiario-solicitar.html" class="nav__link">Solicitar Prótesis</a></div>
+                <div class="nav__item"><a href="beneficiario-mis-solicitudes.html" class="nav__link">Mis Solicitudes</a></div>
+            </nav>
+            <div class="user-menu">
+                <button class="user-menu__button">
+                    <div class="user-menu__avatar"><img src="https://via.placeholder.com/45" alt="Avatar"></div>
+                    <div class="user-menu__dropdown-icon"></div>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <section class="dashboard">
+                <h1 class="dashboard__title">¡Bienvenida, María!</h1>
+                <p class="dashboard__subtitle">Aquí puedes ver el estado de tu solicitud y campaña</p>
+
+                <!-- Status Cards -->
+                <div class="dashboard__kpis">
+                    <div class="card-kpi">
+                        <div class="card-kpi__value">€3,750</div>
+                        <div class="card-kpi__label">Recaudado</div>
+                        <div class="card-kpi__change card-kpi__change--positive">75% de la meta</div>
+                    </div>
+                    <div class="card-kpi">
+                        <div class="card-kpi__value">156</div>
+                        <div class="card-kpi__label">Donantes</div>
+                        <div class="card-kpi__change card-kpi__change--positive">¡Gracias a todos!</div>
+                    </div>
+                    <div class="card-kpi">
+                        <div class="card-kpi__value">15</div>
+                        <div class="card-kpi__label">Días Restantes</div>
+                        <div class="card-kpi__change">Para alcanzar la meta</div>
+                    </div>
+                </div>
+
+                <!-- Campaign Status -->
+                <div class="dashboard__section">
+                    <h2 class="section-title">Estado de tu Campaña</h2>
+                    <div class="campaign-status-card">
+                        <div class="campaign-status-card__header">
+                            <img src="https://via.placeholder.com/400x200" alt="Campaña" class="campaign-status-card__image">
+                            <span class="badge badge--activa">Activa</span>
+                        </div>
+                        <div class="campaign-status-card__body">
+                            <h3 class="campaign-status-card__title">Prótesis de Pierna para María González</h3>
+                            <p class="campaign-status-card__desc">Tu campaña está activa y recibiendo donaciones. ¡Sigue compartiendo para alcanzar tu meta!</p>
+                            <div class="campaign-status-card__progress">
+                                <div class="campaign-status-card__amount">
+                                    <span class="campaign-status-card__raised">€3,750</span>
+                                    <span class="campaign-status-card__goal">de €5,000</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-bar__fill" style="width: 75%;"></div>
+                                </div>
+                            </div>
+                            <div class="campaign-status-card__actions">
+                                <a href="campana-detalle.html" class="btn-secondary">Ver Campaña</a>
+                                <button class="btn-primary-text">Compartir</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Donations -->
+                <div class="dashboard__section">
+                    <h2 class="section-title">Donaciones Recientes</h2>
+                    <div class="donations-list">
+                        <div class="donation-item">
+                            <div class="donation-item__avatar">
+                                <img src="https://via.placeholder.com/50" alt="Donante">
+                            </div>
+                            <div class="donation-item__content">
+                                <div class="donation-item__name">Juan Pérez</div>
+                                <div class="donation-item__message">"¡Mucho ánimo María! Tu historia es inspiradora."</div>
+                                <div class="donation-item__time">Hace 3 horas</div>
+                            </div>
+                            <div class="donation-item__amount">€500</div>
+                        </div>
+                        <div class="donation-item">
+                            <div class="donation-item__avatar">
+                                <img src="https://via.placeholder.com/50" alt="Donante">
+                            </div>
+                            <div class="donation-item__content">
+                                <div class="donation-item__name">Ana López</div>
+                                <div class="donation-item__message">"Espero que alcances la meta pronto. ¡Fuerza!"</div>
+                                <div class="donation-item__time">Hace 1 día</div>
+                            </div>
+                            <div class="donation-item__amount">€300</div>
+                        </div>
+                        <div class="donation-item">
+                            <div class="donation-item__avatar">
+                                <img src="https://via.placeholder.com/50" alt="Donante">
+                            </div>
+                            <div class="donation-item__content">
+                                <div class="donation-item__name">Carlos Ruiz</div>
+                                <div class="donation-item__message">"Compartiendo con todos mis contactos."</div>
+                                <div class="donation-item__time">Hace 2 días</div>
+                            </div>
+                            <div class="donation-item__amount">€250</div>
+                        </div>
+                        <div class="donation-item">
+                            <div class="donation-item__avatar">
+                                <img src="https://via.placeholder.com/50" alt="Donante">
+                            </div>
+                            <div class="donation-item__content">
+                                <div class="donation-item__name">Laura Martínez</div>
+                                <div class="donation-item__message">"¡Ánimo! Pronto tendrás tu prótesis."</div>
+                                <div class="donation-item__time">Hace 3 días</div>
+                            </div>
+                            <div class="donation-item__amount">€150</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="dashboard__section">
+                    <h2 class="section-title">Acciones Rápidas</h2>
+                    <div class="quick-actions">
+                        <a href="beneficiario-solicitar.html" class="quick-action-card">
+                            <div class="quick-action-card__icon quick-action-card__icon--blue">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 5V19M5 12H19" stroke="white" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div class="quick-action-card__content">
+                                <h3 class="quick-action-card__title">Nueva Solicitud</h3>
+                                <p class="quick-action-card__desc">Solicita una nueva prótesis</p>
+                            </div>
+                        </a>
+                        <a href="beneficiario-mis-solicitudes.html" class="quick-action-card">
+                            <div class="quick-action-card__icon quick-action-card__icon--green">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                    <path d="M9 11L12 14L22 4M21 12V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H16" stroke="white" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div class="quick-action-card__content">
+                                <h3 class="quick-action-card__title">Mis Solicitudes</h3>
+                                <p class="quick-action-card__desc">Ver todas mis solicitudes</p>
+                            </div>
+                        </a>
+                        <a href="campana-detalle.html" class="quick-action-card">
+                            <div class="quick-action-card__icon quick-action-card__icon--purple">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                    <path d="M4 12V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V12" stroke="white" stroke-width="2"/>
+                                    <path d="M16 6L12 2L8 6M12 2V15" stroke="white" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div class="quick-action-card__content">
+                                <h3 class="quick-action-card__title">Compartir Campaña</h3>
+                                <p class="quick-action-card__desc">Comparte en redes sociales</p>
+                            </div>
+                        </a>
+                        <a href="#" class="quick-action-card">
+                            <div class="quick-action-card__icon quick-action-card__icon--orange">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                    <path d="M21 11.5C21.0034 12.8199 20.6951 14.1219 20.1 15.3C19.3944 16.7118 18.3098 17.8992 16.9674 18.7293C15.6251 19.5594 14.0782 19.9994 12.5 20C11.1801 20.0035 9.87812 19.6951 8.7 19.1L3 21L4.9 15.3C4.30493 14.1219 3.99656 12.8199 4 11.5C4.00061 9.92179 4.44061 8.37488 5.27072 7.03258C6.10083 5.69028 7.28825 4.6056 8.7 3.90003C9.87812 3.30496 11.1801 2.99659 12.5 3.00003H13C15.0843 3.11502 17.053 3.99479 18.5291 5.47089C20.0052 6.94699 20.885 8.91568 21 11V11.5Z" stroke="white" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div class="quick-action-card__content">
+                                <h3 class="quick-action-card__title">Mensajes</h3>
+                                <p class="quick-action-card__desc">Lee mensajes de donantes</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

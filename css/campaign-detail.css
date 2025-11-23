@@ -1,0 +1,368 @@
+/* Campaign Detail Components */
+
+/* Updates List */
+.updates-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.update-card {
+  padding: var(--space-xl);
+  background: rgba(255, 255, 255, 0.40);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(138, 160, 234, 0.2);
+}
+
+.update-card__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.update-card__avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.update-card__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.update-card__info {
+  flex: 1;
+}
+
+.update-card__author {
+  color: var(--text-primary);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-bold);
+}
+
+.update-card__date {
+  color: var(--text-primary);
+  font-size: var(--font-size-sm);
+  opacity: 0.7;
+  margin-top: 4px;
+}
+
+.update-card__title {
+  color: var(--text-primary);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-bold);
+  margin-bottom: var(--space-sm);
+}
+
+.update-card__text {
+  color: var(--text-primary);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Comment Form */
+.comment-form {
+  display: flex;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-3xl);
+  padding: var(--space-xl);
+  background: rgba(255, 255, 255, 0.40);
+  border-radius: var(--radius-md);
+}
+
+.comment-form__avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.comment-form__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.comment-form__input {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Comments List */
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+.comment {
+  display: flex;
+  gap: var(--space-lg);
+}
+
+.comment__avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.comment__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.comment__content {
+  flex: 1;
+}
+
+.comment__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-sm);
+}
+
+.comment__author {
+  color: var(--text-primary);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-bold);
+}
+
+.comment__date {
+  color: var(--text-primary);
+  font-size: var(--font-size-sm);
+  opacity: 0.7;
+}
+
+.comment__text {
+  color: var(--text-primary);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--space-md);
+}
+
+.comment__actions {
+  display: flex;
+  gap: var(--space-lg);
+}
+
+.comment__action {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-medium);
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: background var(--transition-base);
+}
+
+.comment__action:hover {
+  background: rgba(138, 160, 234, 0.1);
+}
+
+/* Donation Card */
+.donation-card {
+  background: var(--glass-bg-light);
+  box-shadow: var(--shadow-outer);
+  border-radius: var(--radius-lg);
+  border: var(--border-white-2);
+  padding: var(--space-3xl);
+  position: sticky;
+  top: var(--space-xl);
+}
+
+.donation-card__amount {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: var(--space-lg);
+}
+
+.donation-card__raised {
+  color: var(--text-primary);
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-extrabold);
+}
+
+.donation-card__goal {
+  color: var(--text-primary);
+  font-size: var(--font-size-md);
+  opacity: 0.8;
+}
+
+.donation-card__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-2xl);
+}
+
+.donation-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.donation-stat__value {
+  color: var(--text-primary);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-extrabold);
+}
+
+.donation-stat__label {
+  color: var(--text-primary);
+  font-size: var(--font-size-xs);
+  opacity: 0.8;
+  margin-top: 4px;
+}
+
+/* Beneficiary Card */
+.beneficiary-card {
+  background: var(--glass-bg-light);
+  box-shadow: var(--shadow-outer);
+  border-radius: var(--radius-lg);
+  border: var(--border-white-2);
+  padding: var(--space-2xl);
+}
+
+.beneficiary-card__title {
+  color: var(--text-primary);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-bold);
+  margin-bottom: var(--space-lg);
+}
+
+.beneficiary-card__profile {
+  display: flex;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.beneficiary-card__avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.beneficiary-card__info {
+  flex: 1;
+}
+
+.beneficiary-card__name {
+  color: var(--text-primary);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-bold);
+  margin-bottom: 4px;
+}
+
+.beneficiary-card__detail {
+  color: var(--text-primary);
+  font-size: var(--font-size-sm);
+  opacity: 0.8;
+  margin-top: 4px;
+}
+
+.beneficiary-card__details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding-top: var(--space-lg);
+  border-top: 1px solid rgba(138, 160, 234, 0.2);
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detail-item__label {
+  color: var(--text-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-medium);
+}
+
+.detail-item__value {
+  color: var(--text-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-bold);
+}
+
+/* Top Donors Card */
+.top-donors-card {
+  background: var(--glass-bg-light);
+  box-shadow: var(--shadow-outer);
+  border-radius: var(--radius-lg);
+  border: var(--border-white-2);
+  padding: var(--space-2xl);
+}
+
+.top-donors-card__title {
+  color: var(--text-primary);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-bold);
+  margin-bottom: var(--space-lg);
+}
+
+.donor-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.donor-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.donor-item__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.donor-item__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.donor-item__info {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.donor-item__name {
+  color: var(--text-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-medium);
+}
+
+.donor-item__amount {
+  color: var(--text-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-bold);
+}
