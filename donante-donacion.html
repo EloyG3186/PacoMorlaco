@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realizar Donación - Paco el Morlaco</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300;1,400;1,500;1,700;1,800&family=Montserrat+Alternates:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+    <!-- Background Gradients -->
+    <div class="gradient-background">
+        <div class="gradient-background__layer gradient-background__layer--1"></div>
+        <div class="gradient-background__layer gradient-background__layer--2"></div>
+        <div class="gradient-background__layer gradient-background__layer--3"></div>
+        <div class="gradient-background__layer gradient-background__layer--4"></div>
+        <div class="gradient-background__layer gradient-background__layer--5"></div>
+        <div class="gradient-background__overlay"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header__container">
+            <!-- Logo -->
+            <div class="logo">
+                <div class="logo__content">
+                    <img src="assets/images/logo.png" alt="Logo Paco el Morlaco" class="logo__image">
+                    <div class="logo__text">Toma mi mano</div>
+                </div>
+                <div class="logo__border"></div>
+            </div>
+
+            <!-- Navigation Donante -->
+            <nav class="nav nav--donante">
+                <div class="nav__backdrop"></div>
+                <div class="nav__item">
+                    <a href="donante-dashboard.html" class="nav__link">Dashboard</a>
+                </div>
+                <div class="nav__item">
+                    <a href="donante-campanas.html" class="nav__link">Campañas</a>
+                </div>
+                <div class="nav__item">
+                    <a href="donante-favoritos.html" class="nav__link">Favoritos</a>
+                </div>
+                <div class="nav__item">
+                    <a href="donante-historial.html" class="nav__link">Historial</a>
+                </div>
+                <div class="nav__item nav__item--active">
+                    <a href="donante-donacion.html" class="nav__link">Fondo General</a>
+                </div>
+            </nav>
+
+            <!-- User Menu -->
+            <div class="user-menu">
+                <button class="user-menu__button">
+                    <div class="user-menu__avatar">
+                        <img src="https://via.placeholder.com/45" alt="Avatar">
+                    </div>
+                    <div class="user-menu__dropdown-icon"></div>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Dashboard Section -->
+            <section class="dashboard">
+                <!-- Title -->
+                <h1 class="dashboard__title">Realizar Donación</h1>
+
+                <!-- Donation Form -->
+                <div class="modal__content" style="max-width: 1053px; margin: 0 auto;">
+                    <form class="donation-form">
+                        <!-- Campaign Selection -->
+                        <div class="form-group">
+                            <label class="form-label">Selecciona una campaña o dona al fondo general</label>
+                            <select class="select">
+                                <option value="">Fondo General</option>
+                                <option value="1">María González - Prótesis de Pierna</option>
+                                <option value="2">Pedro Ramírez - Prótesis de Brazo</option>
+                                <option value="3">Ana Torres - Prótesis de Mano</option>
+                            </select>
+                        </div>
+
+                        <!-- Amount Selection -->
+                        <div class="form-group">
+                            <label class="form-label">Monto de la donación</label>
+                            <div class="amount-options">
+                                <button type="button" class="amount-btn">$50</button>
+                                <button type="button" class="amount-btn">$100</button>
+                                <button type="button" class="amount-btn amount-btn--active">$250</button>
+                                <button type="button" class="amount-btn">$500</button>
+                                <button type="button" class="amount-btn">$1,000</button>
+                            </div>
+                            <input type="number" class="input" placeholder="O ingresa otro monto" style="margin-top: 16px;">
+                        </div>
+
+                        <!-- Personal Information -->
+                        <div class="form-section">
+                            <h3 class="form-section-title">Información Personal</h3>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label">Nombre completo</label>
+                                    <input type="text" class="input" placeholder="Juan Pérez" value="Juan Pérez">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Correo electrónico</label>
+                                    <input type="email" class="input" placeholder="juan@ejemplo.com" value="juan@ejemplo.com">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Payment Method -->
+                        <div class="form-section">
+                            <h3 class="form-section-title">Método de Pago</h3>
+                            
+                            <div class="payment-methods">
+                                <label class="payment-method">
+                                    <input type="radio" name="payment" value="card" class="radio" checked>
+                                    <span class="payment-method__label">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="2" y="5" width="20" height="14" rx="2" stroke="#8AA0EA" stroke-width="1.5"/>
+                                            <path d="M2 10H22" stroke="#8AA0EA" stroke-width="1.5"/>
+                                        </svg>
+                                        Tarjeta de Crédito/Débito
+                                    </span>
+                                </label>
+                                
+                                <label class="payment-method">
+                                    <input type="radio" name="payment" value="paypal" class="radio">
+                                    <span class="payment-method__label">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="12" cy="12" r="10" stroke="#8AA0EA" stroke-width="1.5"/>
+                                            <path d="M12 8V16M8 12H16" stroke="#8AA0EA" stroke-width="1.5"/>
+                                        </svg>
+                                        PayPal
+                                    </span>
+                                </label>
+                                
+                                <label class="payment-method">
+                                    <input type="radio" name="payment" value="transfer" class="radio">
+                                    <span class="payment-method__label">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="#8AA0EA" stroke-width="1.5"/>
+                                            <path d="M9 22V12H15V22" stroke="#8AA0EA" stroke-width="1.5"/>
+                                        </svg>
+                                        Transferencia Bancaria
+                                    </span>
+                                </label>
+                            </div>
+
+                            <!-- Card Details -->
+                            <div class="card-details">
+                                <div class="form-group">
+                                    <label class="form-label">Número de tarjeta</label>
+                                    <input type="text" class="input" placeholder="1234 5678 9012 3456">
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label class="form-label">Fecha de expiración</label>
+                                        <input type="text" class="input" placeholder="MM/AA">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">CVV</label>
+                                        <input type="text" class="input" placeholder="123">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Donation Summary -->
+                        <div class="donation-summary">
+                            <div class="summary-row">
+                                <span class="summary-label">Monto de donación:</span>
+                                <span class="summary-value">$250.00</span>
+                            </div>
+                            <div class="summary-row">
+                                <span class="summary-label">Comisión de procesamiento:</span>
+                                <span class="summary-value">$0.00</span>
+                            </div>
+                            <div class="summary-row summary-row--total">
+                                <span class="summary-label">Total:</span>
+                                <span class="summary-value">$250.00</span>
+                            </div>
+                        </div>
+
+                        <!-- Anonymous Donation -->
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="checkbox">
+                                <span>Hacer esta donación de forma anónima</span>
+                            </label>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div style="text-align: center; margin-top: 40px;">
+                            <button type="submit" class="btn-primary-text" style="min-width: 300px;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.84 4.61C20.3292 4.099 19.7228 3.69364 19.0554 3.41708C18.3879 3.14052 17.6725 2.99817 16.95 2.99817C16.2275 2.99817 15.5121 3.14052 14.8446 3.41708C14.1772 3.69364 13.5708 4.099 13.06 4.61L12 5.67L10.94 4.61C9.9083 3.57831 8.50903 2.99871 7.05 2.99871C5.59096 2.99871 4.19169 3.57831 3.16 4.61C2.1283 5.64169 1.54871 7.04097 1.54871 8.5C1.54871 9.95903 2.1283 11.3583 3.16 12.39L4.22 13.45L12 21.23L19.78 13.45L20.84 12.39C21.351 11.8792 21.7564 11.2728 22.0329 10.6054C22.3095 9.93789 22.4518 9.22248 22.4518 8.5C22.4518 7.77752 22.3095 7.06211 22.0329 6.39464C21.7564 5.72718 21.351 5.12084 20.84 4.61Z" stroke="#8AA0EA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Completar Donación
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paco el Morlaco - Devolvemos las Súper Capacidades</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300;1,400;1,500;1,700;1,800&family=Montserrat+Alternates:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+    <!-- Background Gradients -->
+    <div class="gradient-background">
+        <div class="gradient-background__layer gradient-background__layer--1"></div>
+        <div class="gradient-background__layer gradient-background__layer--2"></div>
+        <div class="gradient-background__layer gradient-background__layer--3"></div>
+        <div class="gradient-background__layer gradient-background__layer--4"></div>
+        <div class="gradient-background__layer gradient-background__layer--5"></div>
+        <div class="gradient-background__overlay"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header__container">
+            <!-- Logo -->
+            <div class="logo">
+                <div class="logo__content">
+                    <img src="assets/images/logo.png" alt="Logo Paco el Morlaco" class="logo__image">
+                    <div class="logo__text">Toma mi mano</div>
+                </div>
+                <div class="logo__border"></div>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="nav nav--public">
+                <div class="nav__backdrop"></div>
+                <div class="nav__item nav__item--active">
+                    <a href="index.html" class="nav__link">Inicio</a>
+                </div>
+                <div class="nav__item">
+                    <a href="donante-campanas.html" class="nav__link">Campañas</a>
+                </div>
+                <div class="nav__item">
+                    <a href="#contacto" class="nav__link">Contacto</a>
+                </div>
+            </nav>
+
+            <!-- Header Actions -->
+            <div class="header__actions">
+                <a href="login.html" class="nav__link">Login</a>
+                <a href="registro.html" class="btn-primary">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero__content">
+                    <h1 class="hero__title">Devolvemos las Súper Capacidades</h1>
+                    
+                    <p class="hero__subtitle">
+                        Paco el Morlaco – Proyecto colaborativo que devuelve esperanza, movilidad y dignidad a quienes la perdieron.
+                    </p>
+                    
+                    <p class="hero__description">
+                        Creemos que una prótesis no es solo un dispositivo médico. Es libertad. Es la capacidad de abrazar nuevamente, de trabajar, de soñar sin límites. Es la oportunidad de volver a ser tú mismo.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="hero__actions">
+                        <a href="beneficiario-solicitar.html" class="btn-cta">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24 4C12.96 4 4 12.96 4 24C4 35.04 12.96 44 24 44C35.04 44 44 35.04 44 24C44 12.96 35.04 4 24 4Z" stroke="#8AA0EA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M24 16V32M16 24H32" stroke="#8AA0EA" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            Ser paciente
+                        </a>
+                        
+                        <a href="donante-donacion.html" class="btn-cta">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="24" cy="24" r="20" stroke="#8AA0EA" stroke-width="1.5"/>
+                                <path d="M24 16V32M28 20L24 16L20 20" stroke="#8AA0EA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="38" cy="10" r="6" stroke="#8AA0EA" stroke-width="1.5"/>
+                            </svg>
+                            Ser Donante
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Image -->
+                <div class="hero__image">
+                    <div class="hero__image-circle"></div>
+                    <img src="assets/images/hero-illustration.png" alt="Ilustración Paco el Morlaco" class="hero__image-main">
+                </div>
+            </section>
+        </div>
+
+        <!-- Navigation Button -->
+        <div style="position: fixed; bottom: 40px; left: 59px;">
+            <button class="btn-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="10" stroke="#8AA0EA" stroke-width="1.5"/>
+                    <path d="M10 8L14 12L10 16" stroke="#8AA0EA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+    </main>
+</body>
+</html>
