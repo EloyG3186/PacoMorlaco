@@ -10,8 +10,10 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
+  min-width: 100%;
+  min-height: 100%;
   overflow: hidden;
   z-index: -1;
 }
@@ -22,10 +24,10 @@
 
 /* Capa 1: Gradiente diagonal azul */
 .gradient-background__layer--1 {
-  width: 1723px;
-  height: 557px;
-  left: -315.40px;
-  top: 228px;
+  width: 120vw;
+  height: 60vh;
+  left: -20vw;
+  top: 25vh;
   transform: rotate(26deg);
   transform-origin: top left;
   background: linear-gradient(180deg, #DDE3F7 0%, #AABBEE 35%, #8AA0EA 66%, #829EE6 100%);
@@ -33,39 +35,39 @@
 
 /* Capa 2: Gradiente radial púrpura inferior */
 .gradient-background__layer--2 {
-  width: 1536px;
-  height: 326px;
-  left: -91px;
-  top: 735px;
+  width: 110vw;
+  height: 40vh;
+  left: -5vw;
+  top: 70vh;
   background: radial-gradient(ellipse 66.46% 66.21% at 14.14% 55.72%, #C6AFE3 0%, #DCC3F9 50%, #E8DEF6 100%);
 }
 
 /* Capa 3: Gradiente radial púrpura central */
 .gradient-background__layer--3 {
-  width: 1907px;
-  height: 686px;
-  left: -301px;
-  top: 212px;
+  width: 130vw;
+  height: 80vh;
+  left: -20vw;
+  top: 20vh;
   background: radial-gradient(ellipse 64.36% 95.48% at 59.20% 36.30%, #F0ECF7 0%, #E5D4F5 50%, #CEB2ED 100%);
 }
 
 /* Capa 4: Gradiente rosa derecho */
 .gradient-background__layer--4 {
-  width: 1680.40px;
-  height: 403.20px;
-  left: 1587.54px;
-  top: 576.43px;
+  width: 120vw;
+  height: 50vh;
+  right: -30vw;
+  top: 55vh;
   transform: rotate(-176deg);
-  transform-origin: top left;
+  transform-origin: top right;
   background: linear-gradient(270deg, #F3F6FA 0%, #EACCD1 39%, #D7CAE1 100%);
 }
 
 /* Capa 5: Gradiente azul superior */
 .gradient-background__layer--5 {
-  width: 1680px;
-  height: 348px;
-  left: -117px;
-  top: 0px;
+  width: 120vw;
+  height: 40vh;
+  left: -10vw;
+  top: 0;
   background: linear-gradient(90deg, #C7C9F1 0%, #A1CEFF 50%, #6E89FD 100%);
 }
 
@@ -99,12 +101,13 @@
 
 .header__container {
   width: 100%;
-  max-width: 1152px;
+  max-width: var(--container-max-width);
   height: 87px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 var(--space-xl);
+  padding: 0 var(--space-4xl);
+  gap: var(--space-2xl);
 }
 
 /* Logo */
@@ -187,20 +190,24 @@
   width: 450px;
 }
 
-.nav--donante,
+.nav--donante {
+  width: 730px;
+  height: 60px;
+}
+
+.nav--beneficiario {
+  width: 850px;
+  height: 60px;
+}
+
 .nav--admin {
   width: 730px;
   height: 60px;
 }
 
 .nav__backdrop {
-  position: absolute;
-  left: -39px;
-  top: -26px;
-  width: 529px;
-  height: 111px;
-  background: var(--glass-bg-light);
-  backdrop-filter: blur(2px);
+  display: none;
+  /* Elemento no utilizado - deshabilitado */
 }
 
 .nav__item {
@@ -222,10 +229,11 @@
 .nav__item--active::before {
   content: '';
   position: absolute;
-  left: 0;
-  top: 5px;
-  width: 147px;
-  height: 50px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
   background: rgba(255, 255, 255, 0.30);
   border-radius: var(--radius-xl);
   z-index: -1;
@@ -423,6 +431,14 @@
   padding: var(--space-4xl) 0;
 }
 
+/* Campaigns Grid */
+.campaigns-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: var(--space-2xl);
+  margin-top: var(--space-3xl);
+}
+
 .dashboard__title {
   text-align: center;
   color: white;
@@ -460,16 +476,24 @@
 .campaign-hero {
   position: relative;
   width: 100%;
-  height: 400px;
+  height: auto;
+  min-height: 400px;
+  max-height: 500px;
   border-radius: var(--radius-xl);
   overflow: hidden;
   margin-bottom: var(--space-4xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .campaign-hero__image {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  max-height: 500px;
+  object-fit: contain;
+  object-position: center;
 }
 
 .campaign-hero__overlay {
